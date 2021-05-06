@@ -1,7 +1,8 @@
 package com.spring.springapi.model;
 
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.stereotype.Component;
 
+@Component
 public class AuthenticationRequest {
 
     private String username;

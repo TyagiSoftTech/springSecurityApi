@@ -42,7 +42,7 @@ public class JwtTokenUtil {
 
         return Jwts.builder().setClaims(claims).setSubject(subject)
             .setIssuedAt(new Date(System.currentTimeMillis()))
-            .setExpiration(new Date(System.currentTimeMillis() +1000*60*60*10))
+            .setExpiration(new Date(System.currentTimeMillis() +1000*60*60*10)) //Token expire after 10 hours
             .signWith(SignatureAlgorithm.HS512, SECRET_KEY).compact();
     }
     public Boolean validateToken(String token, UserDetails userDetails) {
